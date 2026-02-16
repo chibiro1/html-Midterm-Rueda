@@ -239,9 +239,9 @@ body {
     font-size: 30px;
     cursor: pointer;
     position: fixed;
-    top: 15px;
+    top: 1px;
     right: 20px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
     z-index: 1200;
     display: none;
 }
@@ -272,3 +272,4 @@ body {
         display: none;
     }
 }
+
