@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brandon Rueda - Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="navdiv">
+        <div class="logo"><a href="#">Brandon</a></div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <!-- <li><a href="#">Services</a></li> -->
+            <!-- <li><a href="#">Projects</a></li> -->
+            <li><a href="#contacts">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<span class="menu-icon" onclick="openNav()">&#9776;</span>
+
+<!-- Side Navigation -->
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Log In</a>
+    <a href="#">Sign Up</a>
+    <a href="#about">About</a>
+    <a href="#contacts">Contact</a>
+</div>
+
+<!-- HEADER BANNER -->
+<header class="header-banner">
+    <img src="img/bannerheader.jpg" alt="Banner">
+    <div class="header-text">
+        <h1>Brandon C. Rueda</h1>
+        <p>Aspiring Game Programmer & Designer</p>
+    </div>
+</header>
+
+<!-- MAIN LAYOUT -->
+<div class="main-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <img src="img/ProfileA-removebg-preview.png" alt="Profile Picture">
+
+        <h2 id="about">About Me</h2>
+        <p>
+            I'm Brandon C. Rueda, a 3rd year undergraduate student at University of Caloocan City.
+            I study in Entertainment Multimedia and Computing.
+            I am an aspiring Programmer with skills in Graphics, Editing, and 3D Modeling.
+        </p>
+
+        <h3>My Interests</h3>
+
+        <div class="interest-item">
+            <img src="img/Coding.png">
+            <p>Programming</p>
+        </div>
+
+        <div class="interest-item">
+            <img src="img/game-development.png">
+            <p>Game Development</p>
+        </div>
+
+        <div class="interest-item">
+            <img src="img/uiux.png">
+            <p>UI/UX Design</p>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <!-- CONTENT BLOCK 1 -->
+        <section class="content-block">
+            <h2>Unity Game Project</h2>
+            <p class="subtitle">January 2026</p>
+
+            <div class="image-row">
+                <img src="img/game-development.png">
+                <img src="img/Coding.png">
+                <img src="img/uiux.png">
+            </div>
+
+            <p>
+                This project focuses on developing a 2D game using Unity Engine.
+                It includes gameplay mechanics, UI systems, and animation.
+            </p>
+
+            <p>
+                The goal of this project is to enhance my programming skills
+                and apply game design principles in a practical environment.
+            </p>
+        </section>
+
+        <!-- CONTENT BLOCK 2 -->
+        <section class="content-block">
+            <h2>3D Modeling & Graphics Work</h2>
+            <p class="subtitle">December 2025</p>
+
+            <div class="image-row">
+                <img src="img/uiux.png">
+                <img src="img/game-development.png">
+                <img src="img/Coding.png">
+            </div>
+
+            <p>
+                I previously worked on various 3D models and visual assets
+                for creative and academic projects.
+            </p>
+
+            <p>
+                This experience strengthened my understanding of design,
+                visual storytelling, and digital production workflows.
+            </p>
+        </section>
+
+    </main>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer" id="contacts">
+    <p>© 2026 Brandon C. Rueda | Portfolio Website</p>
+    <a href="url">brandonrueda68@gmail.com</a>
+
+</footer>
+
+<!-- JavaScript -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "200px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html>
