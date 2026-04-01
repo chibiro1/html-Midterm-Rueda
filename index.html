@@ -14,27 +14,23 @@
     <div class="logo">Brandon</div>
 
     <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contacts">Contact</a></li>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contacts" class="nav-link">Contact</a></li>
     </ul>
 
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
 </nav>
 
-<!-- OVERLAY -->
-<div id="overlay" onclick="toggleMenu()"></div>
-
-<!-- MOBILE SIDEBAR -->
+<!-- MOBILE TOP MENU -->
 <div id="mobileMenu" class="mobile-menu">
-    <span class="close-btn" onclick="toggleMenu()">×</span>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#contacts">Contact</a>
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#contacts" class="nav-link">Contact</a>
 </div>
 
 <!-- HEADER -->
-<header class="header-banner">
+<header class="header-banner" id="home">
     <img src="img/bannerheader.jpg">
     <div class="header-text">
         <h1>Brandon C. Rueda</h1>
@@ -45,15 +41,15 @@
 <!-- MAIN -->
 <div class="main-layout">
 
-    <aside class="sidebar">
+    <aside class="sidebar" id="about">
         <img src="img/ProfileA-removebg-preview.png">
 
-        <h2 id="about">About Me</h2>
+        <h2>About Me</h2>
         <p>
             I'm Brandon C. Rueda, a 3rd year undergraduate student.
             I specialize in programming, game development, and design.
         </p>
-
+        <br>
         <h3>My Interests</h3>
 
         <div class="interest-item">
@@ -84,12 +80,10 @@
                 <img src="img/uiux.png">
             </div>
 
-            <p>
-                A 3D Unity game focused on gameplay systems, UI, and interaction design.
-            </p>
+            <p>A 3D Unity game focused on gameplay systems and UI.</p>
         </section>
 
-        <section class="content-block">
+        <section class="content-block" id="contacts">
             <h2>3D Modeling & Graphics</h2>
             <p class="subtitle">December 2025</p>
 
@@ -99,29 +93,43 @@
                 <img src="img/Coding.png">
             </div>
 
-            <p>
-                Experience in 3D modeling, asset creation, and digital design workflows.
-            </p>
+            <p>Experience in modeling, assets, and digital design.</p>
         </section>
 
     </main>
 
 </div>
 
-<!-- FOOTER -->
-<footer class="footer" id="contacts">
+<footer class="footer">
     <p>© 2026 Brandon C. Rueda</p>
 </footer>
 
 <!-- SCRIPT -->
 <script>
 function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    const overlay = document.getElementById("overlay");
-
-    menu.classList.toggle("active");
-    overlay.classList.toggle("active");
+    document.getElementById("mobileMenu").classList.toggle("active");
 }
+
+const sections = document.querySelectorAll("section, header, aside");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(sec => {
+        const sectionTop = sec.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+            current = sec.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
 </script>
 
 </body>
